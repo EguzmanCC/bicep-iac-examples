@@ -1,0 +1,9 @@
+ az configure --defaults group="${resource_group_name}"
+
+what-if-deployments git:(main) ✗ az deployment group create --name main --template-file main.bicep
+
+az deployment group create \
+        --name main \
+        --mode Complete \
+        --confirm-with-what-if \
+        --template-file main.bicep
